@@ -3,19 +3,12 @@ import { Text, View, StyleSheet } from 'react-native'
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={{
-        color: '#e78ed6',
-        fontSize: 24,
-        fontWeight: 'bold'
-      }}>
+      <Text style={styles.eventName}>
         React Native
       </Text>
 
       <Text
-        style={{
-          color: '#e78ed6',
-          fontSize: 20
-        }}
+        style={styles.eventDate}
       >For mobile development
       </Text>
     </View>
@@ -27,6 +20,16 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#2f292b",
     padding: 24
+  },
+  eventName: {
+    color: '#f783aa',
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginTop: 48
+  },
+  eventDate: {
+    color: '#f783aa',
+    fontSize: 18
   }
 })
 
