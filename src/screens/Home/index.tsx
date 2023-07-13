@@ -1,4 +1,4 @@
-import { Text, View } from 'react-native'
+import { Text, TextInput, View } from 'react-native'
 import { styles } from './style'
 
 export function Home() {
@@ -12,6 +12,13 @@ export function Home() {
         style={styles.eventDate}
       >For mobile development
       </Text>
+
+      <TextInput
+        style={styles.input}
+        placeholder='Nome da dev'
+        placeholderTextColor='#6b6b6b'
+      />
+
     </View>
   )
 }
