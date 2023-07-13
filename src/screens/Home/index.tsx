@@ -10,8 +10,8 @@ export function Home() {
     console.log('Welcome!')
   }
 
-  function handleDevRemove() {
-    console.log('Dev successfully removed')
+  function handleDevRemove(name: string) {
+    console.log(`This dev was successfully removed: ${name}`)
   }
 
   return (
@@ -36,7 +36,7 @@ export function Home() {
         </TouchableOpacity>
       </View>
 
-      <Dev name="Penny" onRemove={handleDevRemove} />
+      <Dev name="Penny" onRemove={() => handleDevRemove("Penny")} />
       {/* <Dev name="Sheldon" />
       <Dev name="Raj" />
       <Dev name="Amy" /> */}
