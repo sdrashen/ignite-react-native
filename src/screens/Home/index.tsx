@@ -10,6 +10,10 @@ export function Home() {
     console.log('Welcome!')
   }
 
+  function handleDevRemove() {
+    console.log('Dev successfully removed')
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.eventName}>
@@ -32,10 +36,10 @@ export function Home() {
         </TouchableOpacity>
       </View>
 
-      <Dev name="Penny" />
-      <Dev name="Sheldon" />
+      <Dev name="Penny" onRemove={handleDevRemove} />
+      {/* <Dev name="Sheldon" />
       <Dev name="Raj" />
-      <Dev name="Amy" />
+      <Dev name="Amy" /> */}
 
     </View>
   )
