@@ -18,15 +18,17 @@ export function Home() {
       >For mobile development
       </Text>
 
-      <TextInput
-        style={styles.input}
-        placeholder='Nome da dev'
-        placeholderTextColor='#6b6b6b'
-      />
+      <View style={styles.form}>
+        <TextInput
+          style={styles.input}
+          placeholder='Nome da dev'
+          placeholderTextColor='#6b6b6b'
+        />
 
-      <TouchableOpacity style={styles.button} onPress={handleAddDev}>
-        <Text style={styles.buttonText}>+</Text>
-      </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={handleAddDev}>
+          <Text style={styles.buttonText}>+</Text>
+        </TouchableOpacity>
+      </View>
 
     </View>
   )
