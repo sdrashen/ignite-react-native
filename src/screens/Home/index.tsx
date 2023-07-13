@@ -1,4 +1,7 @@
+import React from 'react'
 import { Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Dev } from '../../components/Dev'
+
 import { styles } from './style'
 
 export function Home() {
@@ -21,14 +24,16 @@ export function Home() {
       <View style={styles.form}>
         <TextInput
           style={styles.input}
-          placeholder='Nome da dev'
+          placeholder='Nome'
           placeholderTextColor='#6b6b6b'
         />
-
         <TouchableOpacity style={styles.button} onPress={handleAddDev}>
           <Text style={styles.buttonText}>+</Text>
         </TouchableOpacity>
       </View>
+
+      <Dev />
+      <Dev />
 
     </View>
   )
