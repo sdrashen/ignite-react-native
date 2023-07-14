@@ -6,6 +6,8 @@ import { styles } from './style'
 
 export function Home() {
 
+  const devs = ['Penny', 'Sheldon', 'Amy', 'Horward', 'Bernnie', 'Leonard', 'Stuart', 'Luke', 'Batman', 'Flash', 'Diana']
+
   function handleAddDev() {
     console.log('Welcome!')
   }
@@ -36,7 +38,15 @@ export function Home() {
         </TouchableOpacity>
       </View>
 
-      <Dev name="Penny" onRemove={() => handleDevRemove("Penny")} />
+      {
+        devs.map(devs => (
+          <Dev
+            key={devs}
+            name={devs}
+            onRemove={() => handleDevRemove("Penny")} />
+        ))
+      }
+
       {/* <Dev name="Sheldon" />
       <Dev name="Raj" />
       <Dev name="Amy" /> */}
