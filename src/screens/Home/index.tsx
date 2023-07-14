@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Text, TextInput, TouchableOpacity, View, ScrollView } from 'react-native'
 import { Dev } from '../../components/Dev'
 
 import { styles } from './style'
@@ -38,19 +38,16 @@ export function Home() {
         </TouchableOpacity>
       </View>
 
-      {
-        devs.map(devs => (
-          <Dev
-            key={devs}
-            name={devs}
-            onRemove={() => handleDevRemove("Penny")} />
-        ))
-      }
-
-      {/* <Dev name="Sheldon" />
-      <Dev name="Raj" />
-      <Dev name="Amy" /> */}
-
+      <ScrollView>
+        {
+          devs.map(devs => (
+            <Dev
+              key={devs}
+              name={devs}
+              onRemove={() => handleDevRemove("Penny")} />
+          ))
+        }
+      </ScrollView>
     </View>
   )
 }
