@@ -38,7 +38,7 @@ export function Home() {
         </TouchableOpacity>
       </View>
 
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         {
           devs.map(devs => (
             <Dev
