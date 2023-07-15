@@ -12,11 +12,19 @@ export function Home() {
     if (devs.includes("Penny")) {
       return Alert.alert("Dev exists", "This dev is already here.")
     }
-    console.log('Welcome!')
   }
 
   function handleDevRemove(name: string) {
-    console.log(`This dev was successfully removed: ${name}`)
+    Alert.alert("Remove", `Remove this dev: ${name}?`, [
+      {
+        text: 'Yes',
+        onPress: () => Alert.alert("The dev was sent back to the lobby!")
+      },
+      {
+        text: 'No',
+        style: 'cancel'
+      }
+    ])
   }
 
   return (
@@ -48,7 +56,7 @@ export function Home() {
           <Dev
             key={item}
             name={item}
-            onRemove={() => handleDevRemove("Penny")} />
+            onRemove={() => handleDevRemove(item)} />
         )}
         showsVerticalScrollIndicator={false}
         ListEmptyComponent={() => (
