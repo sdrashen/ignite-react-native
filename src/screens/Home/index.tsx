@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, TextInput, TouchableOpacity, View, FlatList } from 'react-native'
+import { Text, TextInput, TouchableOpacity, View, FlatList, Alert } from 'react-native'
 import { Dev } from '../../components/Dev'
 
 import { styles } from './style'
@@ -9,6 +9,9 @@ export function Home() {
   const devs = ['Penny', 'Sheldon', 'Amy', 'Horward', 'Bernnie', 'Leonard', 'Stuart', 'Luke', 'Batman', 'Flash', 'Diana']
 
   function handleAddDev() {
+    if (devs.includes("Penny")) {
+      return Alert.alert("Dev exists", "This dev is already here.")
+    }
     console.log('Welcome!')
   }
 
