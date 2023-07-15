@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, TextInput, TouchableOpacity, View, ScrollView } from 'react-native'
+import { Text, TextInput, TouchableOpacity, View, FlatList } from 'react-native'
 import { Dev } from '../../components/Dev'
 
 import { styles } from './style'
@@ -38,16 +38,17 @@ export function Home() {
         </TouchableOpacity>
       </View>
 
-      <ScrollView showsVerticalScrollIndicator={false}>
-        {
-          devs.map(devs => (
-            <Dev
-              key={devs}
-              name={devs}
-              onRemove={() => handleDevRemove("Penny")} />
-          ))
-        }
-      </ScrollView>
+      <FlatList
+        data={devs}
+        keyExtractor={item => item}
+        renderItem={({ item }) => (
+          <Dev
+            key={item}
+            name={item}
+            onRemove={() => handleDevRemove("Penny")} />
+        )}
+        showsVerticalScrollIndicator={false}
+      />
     </View>
   )
 }
