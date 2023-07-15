@@ -30,7 +30,7 @@ export function Home() {
       <View style={styles.form}>
         <TextInput
           style={styles.input}
-          placeholder='Nome'
+          placeholder='Name'
           placeholderTextColor='#6b6b6b'
         />
         <TouchableOpacity style={styles.button} onPress={handleAddDev}>
@@ -39,7 +39,7 @@ export function Home() {
       </View>
 
       <FlatList
-        data={devs}
+        data={[]}
         keyExtractor={item => item}
         renderItem={({ item }) => (
           <Dev
@@ -48,6 +48,9 @@ export function Home() {
             onRemove={() => handleDevRemove("Penny")} />
         )}
         showsVerticalScrollIndicator={false}
+        ListEmptyComponent={() => (
+          <Text style={styles.emptyListText}>No devs yet. Try making some coffee to attract them!</Text>
+        )}
       />
     </View>
   )

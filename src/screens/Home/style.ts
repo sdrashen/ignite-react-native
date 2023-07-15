@@ -43,6 +43,11 @@ export const styles = StyleSheet.create({
     width: '100%',
     marginTop: 36,
     marginBottom: 36
+  },
+  emptyListText: {
+    color: '#fff',
+    fontSize: 18,
+    textAlign: 'center'
   }
 })
 
