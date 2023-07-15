@@ -9,16 +9,16 @@ export function Home() {
   const devs = ['Penny', 'Sheldon', 'Amy', 'Horward', 'Bernnie', 'Leonard', 'Stuart', 'Luke', 'Batman', 'Flash', 'Diana']
 
   function handleAddDev() {
-    if (devs.includes("Penny")) {
-      return Alert.alert("Dev exists", "This dev is already here.")
+    if (devs.includes('Penny')) {
+      return Alert.alert('Dev exists', 'This dev is already here.')
     }
   }
 
   function handleDevRemove(name: string) {
-    Alert.alert("Remove", `Remove this dev: ${name}?`, [
+    Alert.alert('Remove', `Remove this dev: ${name}?`, [
       {
         text: 'Yes',
-        onPress: () => Alert.alert("The dev was sent back to the lobby!")
+        onPress: () => Alert.alert('The dev was sent back to the lobby!')
       },
       {
         text: 'No',
