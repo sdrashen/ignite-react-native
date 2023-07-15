@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Text, TextInput, TouchableOpacity, View, FlatList, Alert } from 'react-native'
 import { Dev } from '../../components/Dev'
 
@@ -6,12 +6,15 @@ import { styles } from './style'
 
 export function Home() {
 
-  const devs = ['Penny', 'Sheldon', 'Amy', 'Horward', 'Bernnie', 'Leonard', 'Stuart', 'Luke', 'Batman', 'Flash', 'Diana']
+  const [devs, setDevs] = useState(['Diana']);
 
   function handleAddDev() {
     if (devs.includes('Penny')) {
       return Alert.alert('Dev exists', 'This dev is already here.')
     }
+
+    setDevs(prevState => [...prevState, 'Bruce'])
+    console.log(devs)
   }
 
   function handleDevRemove(name: string) {
