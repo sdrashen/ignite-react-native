@@ -22,7 +22,7 @@ export function Home() {
     Alert.alert('Remove', `Remove this dev: ${name}?`, [
       {
         text: 'Yes',
-        onPress: () => Alert.alert('The dev was sent back to the lobby!')
+        onPress: () => setDevs(prevState => prevState.filter(devs => devs !== name))
       },
       {
         text: 'No',
