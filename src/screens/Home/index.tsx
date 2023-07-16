@@ -6,15 +6,16 @@ import { styles } from './style'
 
 export function Home() {
 
-  const [devs, setDevs] = useState(['Diana']);
+  const [devs, setDevs] = useState<string[]>([]);
+  const [devName, setDevName] = useState('');
 
   function handleAddDev() {
-    if (devs.includes('Penny')) {
+    if (devs.includes(devName)) {
       return Alert.alert('Dev exists', 'This dev is already here.')
     }
 
-    setDevs(prevState => [...prevState, 'Bruce'])
-    console.log(devs)
+    setDevs(prevState => [...prevState, devName])
+    setDevName('');
   }
 
   function handleDevRemove(name: string) {
@@ -46,6 +47,9 @@ export function Home() {
           style={styles.input}
           placeholder='Name'
           placeholderTextColor='#6b6b6b'
+          // onChangeText={text => setDevName(text)}
+          onChangeText={setDevName}
+          value={devName}
         />
         <TouchableOpacity style={styles.button} onPress={handleAddDev}>
           <Text style={styles.buttonText}>+</Text>
