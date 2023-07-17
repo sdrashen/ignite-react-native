@@ -7,13 +7,13 @@ export const styles = StyleSheet.create({
     padding: 24
   },
   eventName: {
-    color: '#faa443',
+    color: '#1aadaa',
     fontSize: 24,
     fontWeight: 'bold',
     marginTop: 48
   },
   eventDate: {
-    color: '#faa443',
+    color: '#1aadaa',
     fontSize: 18
   },
   input: {
